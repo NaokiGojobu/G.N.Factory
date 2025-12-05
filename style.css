@@ -116,7 +116,7 @@ nav a:hover::after {
   padding: 120px 20px 110px;
 	
 	/*写真の角を丸くする*/
-  border-radius: 20px;
+  border-radius: 0px;
   border: 1px solid var(--border);
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.07);
 
