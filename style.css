@@ -420,6 +420,20 @@ margin-top: 32px;
 
 /* CONTACT */
 
+/* 横並びレイアウト */
+.contact-grid {
+  display: flex;
+  gap: 24px;          /* カード同士の余白 */
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+/* 2つのカードを同じ幅に */
+.contact-card,
+.sns-card {
+  flex: 1;
+}
+
 .contact-card {
   background: var(--white);
   border-radius: 18px;
@@ -454,6 +468,58 @@ textarea {
   resize: vertical;
   min-height: 120px;
 }
+ /* SNS */
+.sns-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 0 22px 26px;
+  border: 1px solid var(--border);
+  max-width: 620px;
+}
+
+/* SNSボタン横並び */
+.sns-buttons {
+  display: flex;
+  gap: 12px;          /* ボタン同士の間隔 */
+  flex-wrap: wrap;   /* 画面が狭い時は折り返す */
+}
+
+/* SNSボタンをお問い合わせボタンと同じ幅にする */
+.sns-buttons .btn-primary {
+  flex: 1;              /* 横幅を均等に伸ばす */
+  min-width: 220px;     /* お問い合わせボタンと近い幅 */
+}
+
+/* Instagramボタン（インスタ風グラデーション） */
+.sns-buttons a[href*="instagram"] {
+  background: linear-gradient(
+    45deg,
+    #f58529,
+    #dd2a7b,
+    #8134af,
+    #515bd4
+  );
+  color: #ffffff;
+  border: none;
+}
+
+/* Instagram hover */
+.sns-buttons a[href*="instagram"]:hover {
+  opacity: 0.9;
+}
+
+/* Facebookボタン（Facebookブルー） */
+.sns-buttons a[href*="facebook"] {
+  background: #1877f2;
+  color: #ffffff;
+  border: none;
+}
+
+/* Facebook hover */
+.sns-buttons a[href*="facebook"]:hover {
+  opacity: 0.9;
+}
+
 
 /* FOOTER */
 
@@ -790,3 +856,5 @@ footer {
   z-index: 2;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
+
+
