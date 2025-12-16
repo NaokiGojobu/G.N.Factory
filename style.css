@@ -881,3 +881,14 @@ footer {
   z-index: 2;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
+/* CONTACT：スマホでは縦並びにする */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-card,
+  .sns-card {
+    max-width: 100%;
+  }
+}
