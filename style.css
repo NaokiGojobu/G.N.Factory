@@ -892,3 +892,73 @@ footer {
     max-width: 100%;
   }
 }
+
+/* 新着情報 */
+
+.news-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+}
+
+.news-title {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  display: flex;
+  gap: 16px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.95rem;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  color: var(--muted);
+  min-width: 110px;
+  font-weight: 600;
+}
+
+.news-text {
+  flex: 1;
+}
+
+.news-text a{
+    color: red;
+}
+
+.news-text a:hover{
+    font-weight: bold;
+}
+
+/* 新着情報：中身だけ縦スクロール */
+
+.news-list{
+  max-height: 160px;   /* ← 好きな高さに調整（例：140〜220） */
+  overflow-y: auto;    /* 縦スクロール */
+  overflow-x: hidden;  /* 横は出さない */
+  padding-right: 6px;  /* スクロールバー分の余白 */
+}
+
+/* スクロールバーを細め（Chrome/Edge/Safari） */
+.news-list::-webkit-scrollbar{
+  width: 10px;
+}
+.news-list::-webkit-scrollbar-thumb{
+  background: var(--border);
+  border-radius: 999px;
+}
