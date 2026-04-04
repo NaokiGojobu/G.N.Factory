@@ -360,6 +360,10 @@ margin-top: 32px;
   padding: 16px 18px 18px;
 }
 
+.product-body span{
+    color: red;
+    font-weight: bold;
+}
 .product-name {
   font-weight: 600;
   margin-bottom: 4px;
