@@ -224,7 +224,7 @@ section {
 .section-lead {
   font-size: 0.98rem;
   color: #555;
-  max-width: 32em;
+  max-width: 100%;
 }
 
 /* orderページ：上部 左右レイアウト */
@@ -265,18 +265,26 @@ section {
 
 .concept-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
   gap: 36px;
   margin-top: 32px;
 }
 
-.concept-points {
+/*.concept-points {
   margin: 0;
   padding-left: 1.2em;
   font-size: 0.95rem;
   color: #555;
-}
+}*/
+.concept-points {
+  margin: 0,auto;
+  padding-left: 1.2em;
+  font-size: 0.95rem;
+  color: #555;
 
+  column-count: 2;
+  column-gap: 40px;
+}
 .concept-card {
   background: var(--white);
   border-radius: 20px;
@@ -965,4 +973,111 @@ footer {
 .news-list::-webkit-scrollbar-thumb{
   background: var(--border);
   border-radius: 999px;
+}
+/* =========================
+   ORDER CTA
+========================= */
+.order-cta {
+  padding: 20px 0 10px;
+  background: #f8f5ef;
+}
+
+.order-cta-inner {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #e3dccf;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.order-cta-title {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 8px 0 16px;
+  color: #3f3124;
+}
+
+.order-cta-copy {
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 18px;
+  color: #4b4037;
+}
+
+.order-cta-points {
+  margin: 0;
+  padding-left: 1.2em;
+  color: #4b4037;
+  line-height: 1.9;
+}
+
+.order-cta-points li + li {
+  margin-top: 6px;
+}
+
+.order-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.order-cta-buttons .btn-primary,
+.order-cta-buttons .btn-outline {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.order-cta-buttons .btn-outline {
+  border: 1px solid #7b5e45;
+  color: #7b5e45;
+  background: #fff;
+}
+
+.order-cta-buttons .btn-outline:hover {
+  background: #7b5e45;
+  color: #fff;
+  transition: 0.3s;
+}
+
+/* タブレット */
+@media (max-width: 1024px) {
+  .order-cta-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .order-cta-title {
+    font-size: 1.7rem;
+  }
+}
+
+/* スマホ */
+@media (max-width: 767px) {
+  .order-cta {
+    padding: 16px 0 0;
+  }
+
+  .order-cta-inner {
+    padding: 22px 18px;
+    border-radius: 16px;
+  }
+
+  .order-cta-title {
+    font-size: 1.4rem;
+  }
+
+  .order-cta-copy,
+  .order-cta-points {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
 }
